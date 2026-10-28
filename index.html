@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iKursus | Kursus IT oleh Sitehandy</title>
+<meta name="description" content="Kursus PHP, Laravel, Flutter, WordPress dan Coding dengan AI oleh Sitehandy. Latihan hands-on untuk individu, syarikat dan agensi kerajaan.">
+<link rel="canonical" href="https://ikursus.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ikursus.com/">
+<meta property="og:title" content="iKursus | Kursus IT oleh Sitehandy">
+<meta property="og:description" content="Belajar coding sambil bina sistem sebenar. PHP, Laravel, Flutter, WordPress dan Coding dengan AI.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23c63a1a'/%3E%3Ctext x='16' y='23' font-family='Arial' font-weight='700' font-size='19' fill='%23fff' text-anchor='middle'%3EiK%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#f4f5f3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1110" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "iKursus oleh Sitehandy Solutions",
+  "url": "https://ikursus.com/",
+  "telephone": "+601138038022",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "F-7 Tingkat 1, Bangunan Arked MARA",
+    "postalCode": "71000",
+    "addressLocality": "Port Dickson",
+    "addressRegion": "Negeri Sembilan",
+    "addressCountry": "MY"
+  }
+}
+</script>
+<style>
+:root {
+  --bg: #f4f5f3;
+  --surface: #fbfbfa;
+  --surface-2: #e9ece8;
+  --ink: #141816;
+  --muted: #535b56;
+  --line: #d9ddd8;
+  --accent: #c63a1a;
+  --on-accent: #ffffff;
+  --code: #151917;
+  --code-ink: #d9dedb;
+  --code-muted: #87928b;
+  --code-key: #ff8a66;
+  --code-str: #b9d3c0;
+  --r: 12px;
+  --font: "Geist", system-ui, sans-serif;
+  --mono: "Geist Mono", ui-monospace, monospace;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e1110;
+    --surface: #151918;
+    --surface-2: #1b201e;
+    --ink: #eaedeb;
+    --muted: #a0a8a2;
+    --line: #272d2a;
+    --accent: #ff6b47;
+    --on-accent: #160d0a;
+    --code: #090b0a;
+  }
+}
+
+* { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 17px/1.6 var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 1200px; margin-inline: auto; padding-inline: 20px; }
+.mono { font-family: var(--mono); }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  height: 48px; padding: 0 22px; border-radius: 10px;
+  font: 600 16px/1 var(--font); text-decoration: none; white-space: nowrap;
+  border: 1px solid transparent;
+  transition: transform .2s var(--ease), background-color .2s, border-color .2s;
+}
+.btn:active { transform: scale(.98); }
+.btn i { font-size: 20px; }
+.btn-primary { background: var(--accent); color: var(--on-accent); }
+.btn-primary:hover { background: color-mix(in srgb, var(--accent) 88%, var(--ink)); }
+.btn-ghost { border-color: var(--line); color: var(--ink); }
+.btn-ghost:hover { border-color: var(--ink); }
+.btn-sm { height: 40px; padding: 0 16px; font-size: 15px; }
+
+/* Nav */
+.nav { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.nav .wrap { display: flex; align-items: center; height: 68px; gap: 32px; }
+.logo { font-weight: 700; font-size: 21px; letter-spacing: -0.03em; text-decoration: none; }
+.logo b { color: var(--accent); }
+.logo small { font: 500 12px var(--mono); color: var(--muted); letter-spacing: 0; margin-left: 8px; }
+.nav ul { display: flex; gap: 28px; list-style: none; padding: 0; margin-left: auto; }
+.nav ul a { text-decoration: none; color: var(--muted); font-size: 15px; font-weight: 500; }
+.nav ul a:hover { color: var(--ink); }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: 1fr 1.08fr; gap: 56px; align-items: center; padding-block: 72px 80px; }
+h1 { font-size: clamp(2.5rem, 4.8vw, 4.1rem); line-height: 1.03; letter-spacing: -0.04em; font-weight: 700; max-width: 12ch; }
+h1 em { font-style: normal; color: var(--accent); }
+.lede { margin-top: 24px; font-size: 19px; color: var(--muted); max-width: 44ch; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+
+/* Code panel */
+.code { background: var(--code); border-radius: var(--r); border: 1px solid var(--line); overflow: hidden; box-shadow: 0 24px 60px -24px color-mix(in srgb, var(--ink) 35%, transparent); }
+.tabs { display: flex; overflow-x: auto; border-bottom: 1px solid #ffffff14; scrollbar-width: none; }
+.tabs button {
+  flex: none; background: none; border: 0; cursor: pointer;
+  padding: 14px 16px; font: 500 13px var(--mono); color: var(--code-muted);
+  border-bottom: 2px solid transparent; transition: color .2s;
+}
+.tabs button:hover { color: var(--code-ink); }
+.tabs button[aria-selected="true"] { color: #fff; border-bottom-color: var(--code-key); }
+.code pre {
+  margin: 0; padding: 24px; min-height: 17.5em; overflow-x: auto;
+  font: 400 13.5px/1.75 var(--mono); color: var(--code-ink); tab-size: 4;
+}
+.code pre[hidden] { display: none; }
+.code .file { display: block; color: var(--code-muted); margin-bottom: 12px; }
+.k { color: var(--code-key); }
+.s { color: var(--code-str); }
+.c { color: var(--code-muted); }
+
+/* Facts strip */
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); border-block: 1px solid var(--line); }
+.facts div { padding: 28px 0; }
+.facts div + div { border-left: 1px solid var(--line); padding-left: 32px; }
+.facts strong { display: block; font-size: clamp(1.8rem, 3.4vw, 2.6rem); letter-spacing: -0.035em; line-height: 1.1; font-weight: 600; }
+.facts span { color: var(--muted); font-size: 15px; }
+
+/* Sections */
+section { padding-block: 104px 0; }
+h2 { font-size: clamp(1.9rem, 3.4vw, 2.8rem); line-height: 1.1; letter-spacing: -0.035em; font-weight: 700; max-width: 20ch; }
+.sub { margin-top: 16px; color: var(--muted); max-width: 58ch; }
+
+/* Courses bento */
+.courses { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; margin-top: 48px; }
+.card { position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 30px; overflow: hidden; }
+.card h3 { font-size: 24px; letter-spacing: -0.025em; line-height: 1.2; font-weight: 600; margin-top: 10px; }
+.card p { color: var(--muted); margin-top: 10px; max-width: 46ch; }
+.level { font: 500 12px var(--mono); letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+.c-laravel { grid-column: 1 / 7; grid-row: 1 / 3; display: flex; flex-direction: column; }
+.c-laravel h3 { font-size: 34px; }
+.c-laravel::after {
+  content: ""; position: absolute; inset: auto -1px -1px auto; width: 60%; height: 55%;
+  background: radial-gradient(var(--line) 1.2px, transparent 1.4px) 0 0 / 18px 18px;
+  -webkit-mask-image: linear-gradient(to top left, #000 30%, transparent 75%);
+  mask-image: linear-gradient(to top left, #000 30%, transparent 75%);
+  pointer-events: none;
+}
+.topics { list-style: none; padding: 0; margin-top: auto; padding-top: 36px; display: grid; gap: 10px; position: relative; z-index: 1; }
+.topics li { display: flex; align-items: center; gap: 10px; font-weight: 500; }
+.topics i { color: var(--accent); font-size: 18px; }
+.c-ai { grid-column: 7 / 13; background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.c-ai p, .c-ai .level { color: var(--on-accent); }
+.c-php { grid-column: 7 / 10; }
+.c-flutter { grid-column: 10 / 13; }
+.c-wp { grid-column: 1 / 13; background: var(--surface-2); display: grid; grid-template-columns: 1fr 1.3fr; gap: 32px; align-items: end; }
+.c-wp p { margin-top: 0; }
+.note { margin-top: 28px; color: var(--muted); font-size: 15px; }
+.note a { color: var(--ink); font-weight: 600; text-underline-offset: 4px; }
+
+/* Organisations */
+.org { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.perks { list-style: none; padding: 0; display: grid; gap: 0; }
+.perks li { display: grid; grid-template-columns: 44px 1fr; gap: 16px; padding-block: 24px; }
+.perks li + li { border-top: 1px solid var(--line); }
+.perks li:first-child { padding-top: 6px; }
+.perks i { font-size: 26px; color: var(--accent); }
+.perks strong { display: block; font-size: 19px; letter-spacing: -0.015em; }
+.perks span { color: var(--muted); }
+
+/* FAQ */
+.faq { display: grid; grid-template-columns: 1fr 1.5fr; gap: 64px; }
+details { border-bottom: 1px solid var(--line); }
+details:first-child { border-top: 1px solid var(--line); }
+summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; gap: 24px; padding-block: 22px; font-weight: 600; font-size: 18px; letter-spacing: -0.01em; }
+summary::-webkit-details-marker { display: none; }
+summary i { font-size: 20px; color: var(--muted); transition: transform .3s var(--ease); flex: none; margin-top: 3px; }
+details[open] summary i { transform: rotate(45deg); }
+details p { color: var(--muted); padding-bottom: 22px; max-width: 60ch; }
+
+/* CTA + footer */
+.cta { margin-top: 104px; background: var(--surface-2); border-radius: var(--r); padding: 56px; display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap; }
+.cta h2 { max-width: 18ch; }
+.cta p { color: var(--muted); margin-top: 10px; }
+footer { padding-block: 48px 40px; margin-top: 56px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+footer address { font-style: normal; max-width: 52ch; }
+
+/* Motion: entrance for hierarchy, scroll reveal for course cards */
+@media (prefers-reduced-motion: no-preference) {
+  .rise { animation: rise .8s var(--ease) both; animation-delay: calc(var(--i, 0) * 90ms); }
+  @keyframes rise { from { opacity: 0; transform: translateY(16px); } }
+  .code pre:not([hidden]) { animation: fade .35s var(--ease); }
+  @keyframes fade { from { opacity: 0; transform: translateY(4px); } }
+  @supports (animation-timeline: view()) {
+    .card { animation: rise linear both; animation-timeline: view(); animation-range: entry 0% entry 40%; }
+  }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Mobile */
+@media (max-width: 900px) {
+  .hero, .org, .faq { grid-template-columns: 1fr; gap: 40px; }
+  .hero { padding-block: 48px 56px; }
+  .courses { grid-template-columns: 1fr; }
+  .c-laravel, .c-ai, .c-php, .c-flutter, .c-wp { grid-column: 1; grid-row: auto; }
+  .c-wp { grid-template-columns: 1fr; gap: 10px; }
+  .card { padding: 24px; }
+  .c-laravel h3 { font-size: 28px; }
+}
+@media (max-width: 760px) {
+  .nav ul, .logo small { display: none; }
+  .nav .wrap { justify-content: space-between; }
+  section { padding-block: 72px 0; }
+  .facts div + div { padding-left: 16px; }
+  .facts span { font-size: 13px; }
+  .cta { padding: 32px 24px; margin-top: 72px; }
+  .code pre { font-size: 13px; padding: 20px; }
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#">i<b>K</b>ursus<small>oleh Sitehandy</small></a>
+    <ul>
+      <li><a href="#kursus">Kursus</a></li>
+      <li><a href="#organisasi">Untuk organisasi</a></li>
+      <li><a href="#soalan">Soalan lazim</a></li>
+    </ul>
+    <a class="btn btn-primary btn-sm" href="https://wa.me/601138038022?text=Salam%2C%20saya%20nak%20tahu%20tentang%20kursus%20di%20iKursus." target="_blank" rel="noopener"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i>WhatsApp kami</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div>
+      <h1 class="rise">Belajar coding sambil bina sistem <em>sebenar.</em></h1>
+      <p class="lede rise" style="--i:1">Kursus PHP, Laravel, Flutter, WordPress dan Coding dengan AI oleh Sitehandy. Untuk individu, syarikat dan agensi kerajaan.</p>
+      <div class="actions rise" style="--i:2">
+        <a class="btn btn-primary" href="#kursus">Lihat kursus<i class="ph ph-arrow-down" aria-hidden="true"></i></a>
+        <a class="btn btn-ghost" href="https://wa.me/601138038022?text=Salam%2C%20saya%20nak%20tahu%20tentang%20kursus%20di%20iKursus." target="_blank" rel="noopener"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i>WhatsApp kami</a>
+      </div>
+    </div>
+
+    <div class="code rise" style="--i:3">
+      <div class="tabs" role="tablist" aria-label="Contoh kod setiap kursus">
+        <button role="tab" id="t-laravel" aria-controls="p-laravel" aria-selected="true">Laravel</button>
+        <button role="tab" id="t-ai" aria-controls="p-ai" aria-selected="false" tabindex="-1">Coding + AI</button>
+        <button role="tab" id="t-php" aria-controls="p-php" aria-selected="false" tabindex="-1">PHP</button>
+        <button role="tab" id="t-flutter" aria-controls="p-flutter" aria-selected="false" tabindex="-1">Flutter</button>
+        <button role="tab" id="t-wp" aria-controls="p-wp" aria-selected="false" tabindex="-1">WordPress</button>
+      </div>
+<pre role="tabpanel" id="p-laravel" aria-labelledby="t-laravel" tabindex="0"><span class="file">routes/web.php</span>Route::<span class="k">middleware</span>(<span class="s">'auth'</span>)-&gt;<span class="k">group</span>(<span class="k">function</span> () {
+    Route::<span class="k">get</span>(<span class="s">'/kursus'</span>, [KursusController::<span class="k">class</span>, <span class="s">'index'</span>]);
+
+    Route::<span class="k">post</span>(<span class="s">'/kursus/{kursus}/daftar'</span>,
+        [PendaftaranController::<span class="k">class</span>, <span class="s">'store'</span>])
+        -&gt;<span class="k">name</span>(<span class="s">'kursus.daftar'</span>);
+});</pre>
+<pre role="tabpanel" id="p-ai" aria-labelledby="t-ai" tabindex="0" hidden><span class="file">prompt.md</span><span class="c"># Arahan kepada pembantu AI</span>
+Tulis migration Laravel untuk jadual <span class="s">`pendaftaran`</span>
+dengan foreign key ke <span class="s">`kursus`</span> dan <span class="s">`users`</span>.
+
+Kemudian terangkan setiap baris
+supaya saya <span class="k">faham</span>, bukan sekadar salin.</pre>
+<pre role="tabpanel" id="p-php" aria-labelledby="t-php" tabindex="0" hidden><span class="file">peserta.php</span><span class="k">$pdo</span> = <span class="k">new</span> PDO(<span class="s">'mysql:host=localhost;dbname=ikursus'</span>, <span class="s">'root'</span>, <span class="s">''</span>);
+
+<span class="k">$stmt</span> = <span class="k">$pdo</span>-&gt;prepare(
+    <span class="s">'SELECT nama FROM peserta WHERE kursus = ?'</span>
+);
+<span class="k">$stmt</span>-&gt;execute([<span class="s">'laravel'</span>]);
+
+<span class="k">foreach</span> (<span class="k">$stmt</span> <span class="k">as</span> <span class="k">$row</span>) <span class="k">echo</span> <span class="k">$row</span>[<span class="s">'nama'</span>], PHP_EOL;</pre>
+<pre role="tabpanel" id="p-flutter" aria-labelledby="t-flutter" tabindex="0" hidden><span class="file">lib/senarai_kursus.dart</span><span class="k">class</span> SenaraiKursus <span class="k">extends</span> StatelessWidget {
+  <span class="k">const</span> SenaraiKursus({<span class="k">super</span>.key});
+
+  <span class="c">@override</span>
+  Widget build(BuildContext context) {
+    <span class="k">return</span> ListView(children: <span class="k">const</span> [
+      ListTile(title: Text(<span class="s">'Laravel'</span>)),
+      ListTile(title: Text(<span class="s">'Flutter'</span>)),
+    ]);
+  }
+}</pre>
+<pre role="tabpanel" id="p-wp" aria-labelledby="t-wp" tabindex="0" hidden><span class="file">functions.php</span><span class="k">add_action</span>(<span class="s">'init'</span>, <span class="k">function</span> () {
+    <span class="k">register_post_type</span>(<span class="s">'kursus'</span>, [
+        <span class="s">'label'</span>        =&gt; <span class="s">'Kursus'</span>,
+        <span class="s">'public'</span>       =&gt; <span class="k">true</span>,
+        <span class="s">'show_in_rest'</span> =&gt; <span class="k">true</span>,
+    ]);
+});</pre>
+    </div>
+  </div>
+
+  <div class="facts">
+    <div><strong>2007</strong><span>Sitehandy membina web sejak</span></div>
+    <div><strong>1,000+</strong><span>peserta telah dilatih</span></div>
+    <div><strong>5</strong><span>bidang kursus hands-on</span></div>
+  </div>
+
+  <section id="kursus">
+    <h2>Pilih kursus ikut apa yang anda mahu bina.</h2>
+    <p class="sub">Setiap kelas dijalankan secara hands-on. Anda menulis kod sendiri dari awal hingga akhir, dengan jurulatih di sebelah.</p>
+
+    <div class="courses">
+      <article class="card c-laravel">
+        <span class="level">Pertengahan</span>
+        <h3>Laravel</h3>
+        <p>Bina aplikasi web lengkap dengan framework PHP paling popular, dari pangkalan data hingga dilancarkan ke server.</p>
+        <ul class="topics">
+          <li><i class="ph ph-check" aria-hidden="true"></i>Routing, controller dan Blade</li>
+          <li><i class="ph ph-check" aria-hidden="true"></i>Eloquent ORM dan migration</li>
+          <li><i class="ph ph-check" aria-hidden="true"></i>Login, peranan dan kebenaran pengguna</li>
+          <li><i class="ph ph-check" aria-hidden="true"></i>Deploy ke server production</li>
+        </ul>
+      </article>
+
+      <article class="card c-ai">
+        <span class="level">Semua tahap</span>
+        <h3>Coding dengan AI</h3>
+        <p>Guna pembantu AI untuk menulis, menyemak dan membaiki kod, sambil anda kekal faham dan mengawal apa yang dihantar ke production.</p>
+      </article>
+
+      <article class="card c-php">
+        <span class="level">Asas</span>
+        <h3>PHP</h3>
+        <p>Sintaks, borang, sesi dan MySQL. Asas yang kukuh sebelum ke framework.</p>
+      </article>
+
+      <article class="card c-flutter">
+        <span class="level">Pertengahan</span>
+        <h3>Flutter</h3>
+        <p>Satu kod untuk aplikasi Android dan iOS, disambung ke API sebenar.</p>
+      </article>
+
+      <article class="card c-wp">
+        <div>
+          <span class="level">Asas</span>
+          <h3>WordPress</h3>
+        </div>
+        <p>Laman web syarikat yang anda boleh urus sendiri: tema, plugin, keselamatan dan kelajuan laman.</p>
+      </article>
+    </div>
+
+    <p class="note">Jadual, lokasi dan yuran terkini: <a href="https://wa.me/601138038022?text=Salam%2C%20saya%20nak%20tahu%20tentang%20kursus%20di%20iKursus." target="_blank" rel="noopener">WhatsApp kami</a></p>
+  </section>
+
+  <section id="organisasi" class="org">
+    <div>
+      <h2>Latihan khas untuk jabatan dan syarikat anda.</h2>
+      <p class="sub">Sitehandy telah melatih kakitangan agensi kerajaan dan syarikat swasta. Silibus boleh disesuaikan dengan sistem yang pasukan anda guna setiap hari.</p>
+    </div>
+    <ul class="perks">
+      <li><i class="ph ph-list-checks" aria-hidden="true"></i><div><strong>Silibus ikut keperluan</strong><span>Topik dipilih berdasarkan projek dan tahap sebenar pasukan anda.</span></div></li>
+      <li><i class="ph ph-buildings" aria-hidden="true"></i><div><strong>Kelas in-house</strong><span>Latihan untuk kakitangan anda sahaja, di premis anda atau lokasi yang dipersetujui.</span></div></li>
+      <li><i class="ph ph-file-text" aria-hidden="true"></i><div><strong>Sebut harga rasmi</strong><span>Dokumen lengkap untuk proses perolehan jabatan dan syarikat.</span></div></li>
+    </ul>
+  </section>
+
+  <section id="soalan" class="faq">
+    <h2>Soalan lazim</h2>
+    <div>
+      <details>
+        <summary>Saya belum pernah coding. Kursus mana sesuai?<i class="ph ph-plus" aria-hidden="true"></i></summary>
+        <p>Mula dengan PHP atau WordPress. Laravel dan Flutter lebih mudah diikuti selepas anda faham asas pengaturcaraan.</p>
+      </details>
+      <details>
+        <summary>Boleh adakan kelas untuk kakitangan kami sahaja?<i class="ph ph-plus" aria-hidden="true"></i></summary>
+        <p>Boleh. Beritahu kami bilangan peserta dan topik yang diperlukan. Kami akan sediakan cadangan silibus dan sebut harga.</p>
+      </details>
+      <details>
+        <summary>Apa yang perlu dibawa ke kelas?<i class="ph ph-plus" aria-hidden="true"></i></summary>
+        <p>Komputer riba sendiri. Senarai perisian yang perlu dipasang akan dihantar sebelum kelas bermula.</p>
+      </details>
+      <details>
+        <summary>Bagaimana nak tahu jadual kelas seterusnya?<i class="ph ph-plus" aria-hidden="true"></i></summary>
+        <p>WhatsApp kami di +6011-3803 8022. Kami akan maklumkan tarikh, lokasi dan yuran terkini.</p>
+      </details>
+    </div>
+  </section>
+
+  <div class="cta">
+    <div>
+      <h2>Ada soalan tentang kursus?</h2>
+      <p>Kami balas dengan jadual, yuran dan cadangan kursus yang sesuai.</p>
+    </div>
+    <a class="btn btn-primary" href="https://wa.me/601138038022?text=Salam%2C%20saya%20nak%20tahu%20tentang%20kursus%20di%20iKursus." target="_blank" rel="noopener"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i>WhatsApp kami</a>
+  </div>
+
+  <footer>
+    <address>iKursus ialah platform latihan Sitehandy Solutions (SSM 201603060232). F-7 Tingkat 1, Bangunan Arked MARA, 71000 Port Dickson, Negeri Sembilan.</address>
+    <span>&copy; 2026 Sitehandy Solutions</span>
+  </footer>
+</main>
+
+<script>
+const tabs = [...document.querySelectorAll('[role=tab]')];
+function pick(tab) {
+  tabs.forEach(t => {
+    const on = t === tab;
+    t.setAttribute('aria-selected', on);
+    t.tabIndex = on ? 0 : -1;
+    document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+  });
+}
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => pick(t));
+  t.addEventListener('keydown', e => {
+    const d = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+    if (!d) return;
+    const next = tabs[(i + d + tabs.length) % tabs.length];
+    pick(next);
+    next.focus();
+  });
+});
+</script>
+</body>
+</html>
